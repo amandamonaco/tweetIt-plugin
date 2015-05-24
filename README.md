@@ -41,7 +41,7 @@ The default settings for the plugin provide you with simply the text when you cl
 
 In order to do so, simply place an object inside the jquery.tweetIt.js function we called earlier (as shown below), and insert your chosen customization.
 
-###Default<
+###Default
 	
 	$(function(){
 		$('.tweetButton').tweetIt(
@@ -55,7 +55,7 @@ In order to do so, simply place an object inside the jquery.tweetIt.js function 
 
 ###Sample Options
 
-	![Table of options for plugin](assets/images/tableOfOptions.jpg)
+![Table of options for plugin](assets/images/tableOfOptions.jpg)
 		
 	$(function(){
 		$('.tweetButton').tweetIt(
