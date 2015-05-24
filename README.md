@@ -1,5 +1,6 @@
 #**tweetIt.js** jQuery Plugin
 
+[View Live](http://amandamonaco.ca/tweetIt-plugin/index.html)
 
 ##Usage
 
