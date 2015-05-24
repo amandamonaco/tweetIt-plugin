@@ -1,0 +1,278 @@
+/*PARTIALS
+=========================================================*/
+@import "setup";
+@import "webFonts";
+@import "buttonStyles";
+
+
+/*GENERAL STYLES 
+=========================================================*/
+
+body {
+	background: #ffffff;
+	color:#22313f;
+	font-family: 'Lato', sans-serif;
+}
+
+
+a{
+	text-decoration: none;
+	color:#ffffff;
+}
+
+/*WRAPPER STYLES
+=============================================*/
+
+.wrapper{
+	max-width:70%;
+	margin:0 auto;
+	text-align: center;
+}
+
+
+/*HEADING STYLES 
+============================================*/
+
+header{
+	background: #41AAF1;
+	height:100vh;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+	h1{
+		color:#ffffff;
+		font-family: 'barrioregular';
+		font-size: 100px;
+		margin:0;
+		padding:0;
+	}
+	h2.tweetButton{
+		font-size: 30px;
+		color:#ffffff;
+		font-weight: 300;
+		letter-spacing: 5px;
+		line-height: 1.7;
+	}
+}
+
+i.fa-twitter{
+	color:#ffffff;
+	-webkit-animation:swing 2s infinite ease-in-out;
+}
+
+@-webkit-keyframes swing{
+    0%{-webkit-transform:rotate(-5deg)}
+    50%{-webkit-transform:rotate(10deg)}
+    100%{-webkit-transform:rotate(-5deg)}
+}
+
+
+/*CONTENT STYLES
+===============================================*/
+
+section.content{
+	padding-bottom: 50px;
+	h2.docHeading{
+		text-align: left;
+		font-size: 40px;
+		font-weight: 700;
+		text-transform: uppercase;
+		span.title{
+			text-transform: none;
+			font-weight: 900;
+			font-size: 75px;
+		}
+	}
+	h2.docHeading.one{
+		font-weight: 400;
+		border-bottom: 4px solid #f62459;
+		font-size: 50px;
+	}
+	p.remember{
+		font-size: 20px;
+	}
+	p{
+		font-size: 25px;
+		font-weight:300;
+		text-align: left;
+		line-height: 1.5;
+		span.firstWord{
+			font-weight: 400;
+		}
+		a{
+			color:#22313f;
+		}
+		a:hover{
+			color:#f62459;
+			-webkit-transition: all ease 0.2s;
+		}
+	}
+	h3.html, 
+	h3.javascript,
+	h4{
+		text-align: left;
+		text-transform: uppercase;
+		color:#4ecdc4;
+		font-weight: 400;
+		font-size: 25px;
+	}
+	h3.javascript{
+		color:#bf55ec;
+	}
+	h4{
+		color:#e87e04;
+	}
+}
+
+span.underline{
+	text-decoration: underline;
+}
+
+/*CODE BLOCK STYLES
+============================================*/
+
+div.code{
+	text-align: left;
+	background:rgba(134,226,213, 0.2);
+	font-family: monospace, sans-serif;
+	padding:30px;
+	line-height: 2;
+}
+
+code.hideTwo,
+code.hideThree{
+	display:none;
+}
+
+div.sample{
+	display: flex;
+	justify-content: space-between;
+}
+
+/*TABLE STYLES
+========================================*/
+
+table{
+	border: 1px solid #22313f;
+	text-align: left;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	order: 2;
+	th{
+		padding:20px;
+		font-size: 20px;
+	}
+	td{
+		border: 1px solid #22313f;
+		padding: 20px;
+	}
+}
+
+
+/*FOOTER STYLES
+==========================================*/
+footer {
+	background: #41AAF1;
+	padding-bottom: 20px;
+	p{
+		font-size: 25px;
+		font-weight: 100;
+		color:#ffffff;
+		margin:0;
+		padding-top:10px;
+	}
+	p.design{
+		font-size: 20px;
+		padding-bottom: 20px;
+	}
+}
+
+footer a:hover{
+	color:#22313f;
+	margin:0;
+	-webkit-transition: all ease 0.5s;
+}
+
+/*MEDIA QUERIES
+================================================*/
+
+/* Portrait tablet and small desktops */
+@media (max-width: 1050px) {
+	.wrapper{
+		max-width: 85%;
+	}
+	code{
+		font-size: 15px;	
+	}
+	div.sample{
+		flex-direction:column;
+		justify-content:center;
+		align-items:left;
+	}
+	table{
+		order:-1;
+	}
+}
+
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 790px) {
+	code{
+		font-size: 12px;	
+	}
+	header{
+		height:100%;
+	}
+	h2.tweetButton{
+		font-size: 20px;
+	}
+	button{
+		font-size: 15px;
+		margin-bottom: 10px;
+	}
+	i.fa-arrow-circle-down{
+		font-size: 15px;
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 525px) {
+	code.hideOne{
+		display:none;
+	}
+	code.hideTwo{
+		display: inline-block;
+	}
+}
+
+
+/* Smallest of the Phones */
+@media (max-width: 320px) {
+	h1{
+		font-size: 60px;
+	}
+	h2.tweetButton{
+		font-size: 15px;
+	}
+	span.title{
+		font-size: 40px;
+	}
+	h2.docHeading{
+		font-size: 30px;
+	}
+	section.content p{
+		font-size: 16px;
+	}
+	code.hideTwo{
+		display: none;
+	}
+	code.hideThree{
+		display:inline-block;
+	}
+	code.shrink{
+		font-size: 9px;
+	}
+
+}
+
