@@ -60,7 +60,7 @@ a{
 =============================================*/
 
 .wrapper{
-	width:70%;
+	max-width:70%;
 	margin:0 auto;
 	text-align: center;
 }
@@ -160,6 +160,11 @@ div.code{
 	padding:30px;
 	line-height: 2;
 }
+code.hideTwo,
+code.hideThree{
+	display:none;
+}
+
 
 h3.html, 
 h3.javascript,
@@ -232,44 +237,80 @@ footer a:hover{
 ========================================*/
 
 /* Portrait tablet and small desktops */
-@media (max-width: 1300px) {
-
-	
-
+@media (max-width: 1050px) {
+	.wrapper{
+		max-width: 85%;
+	}
+	code{
+		font-size: 15px;	
+	}
+	div.sample{
+		flex-direction:column;
+		justify-content:center;
+		align-items:left;
+	}
+	table{
+		order:-1;
+	}
 }
 
  
 /* Landscape phone to portrait tablet */
 @media (max-width: 790px) {
-
-	
-
+	code{
+		font-size: 12px;	
+	}
+	header{
+		height:100%;
+	}
+	h2.tweetButton{
+		font-size: 20px;
+	}
+	button{
+		font-size: 15px;
+		margin-bottom: 10px;
+	}
+	i.fa-arrow-circle-down{
+		font-size: 15px;
+	}
 }
 
- 
 /* Landscape phones and down */
 @media (max-width: 525px) {
-
-	
+	code.hideOne{
+		display:none;
+	}
+	code.hideTwo{
+		display: inline-block;
+	}
 }
 
 
 /* Smallest of the Phones */
-@media (max-width: 300px) {
-
-
-header h1 {
-	font-size: 32px;
-	line-height: 36px;	
-}
-
-h2 {
-	font-size: 25px;
-	line-height: 30px;
-}
-
-button {
-	font-size: 12px;
-}
+@media (max-width: 320px) {
+	h1{
+		font-size: 60px;
+	}
+	h2.tweetButton{
+		font-size: 15px;
+	}
+	span.title{
+		font-size: 40px;
+	}
+	h2.docHeading{
+		font-size: 30px;
+	}
+	section.content p{
+		font-size: 16px;
+	}
+	code.hideTwo{
+		display: none;
+	}
+	code.hideThree{
+		display:inline-block;
+	}
+	code.shrink{
+		font-size: 9px;
+	}
 
 }

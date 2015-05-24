@@ -44,7 +44,9 @@
 			<p>Next, you will want to make sure to link <strong>jQuery</strong> in your HTML file, along with <strong>jquery.tweetIt.js.</strong> Place these links <span class="underline">at the bottom</span>, just before your closing body tag, and make sure to place the plugin script <em>after</em> the jQuery script.</p>
 			<h3 class="html">HTML</h3>
 			<div class="code"> <!--codeblock-->
-				<code>&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;</code>
+				<code class="hideOne">&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;</code>
+				<code class="hideTwo">&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/<br>jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;</code>
+				<code class="hideThree">&lt;script src=&quot;https://ajax.<br>googleapis.com/ajax<br>/libs/jquery/1.10.2<br>/jquery.min.js&quot;&gt;&lt;/script&gt;</code>
 				<br>
 				<code>&lt;script src=&quot;js/jquery.tweetIt.js&quot;&gt;&lt;/script&gt;</code>
 				<br><code>&lt;/body&gt;</code>
@@ -69,7 +71,7 @@
 
 			<h4>Default</h4>
 			<div class="code">
-<code><pre>$(function(){
+<code class="shrink"><pre>$(function(){
 	$('.tweetButton').tweetIt(
 		size: 'large',
 		count: 'none',
@@ -111,7 +113,7 @@
 		</table>
 		
 		<div class="code">
-<code><pre>$(function(){
+<code class="shrink"><pre>$(function(){
 	$('.tweetButton').tweetIt(
 		size: 'small',
 		count: 'horizontal',
