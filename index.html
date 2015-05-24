@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Tweet It</title>
+	<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+	
+	<!-- HEADER
+	=============================================================-->	
+
+	<header id="top"> <!--Header-->
+		<div class="wrapper"> <!--Header Wrapper-->
+			<h1>Tweet It <i class="fa fa-twitter"></i></h1>
+			<h2 class="tweetButton">Love twitter? Use this dynamic jQuery plugin to make any text on your page tweetable!</h2>
+			<a href="#" class="github"><button>Fork me on Github</button></a>
+			<a href="#content" class="findOutHow"><button>Show me how!<i class="fa fa-arrow-circle-down"></i></button></a>
+		</div> <!--end of Header Wrapper-->
+	</header> <!--end of Header-->
+	
+	<!-- DOCUMENTATION
+	================================================================-->
+
+	<section id="content" class="content"> <!--Documentation section-->
+		<div class="wrapper"><!--Content Wrapper-->
+			<h2 class="docHeading one"><span class="title">tweetIt.js</span> jQuery Plugin</h2>
+
+			<h2 class="docHeading">Usage</h2>
+			<p><span class="firstWord">Tweet It</span> allows you to easily add a twitter button alongside any text on your website that you want to allow a user to tweet out. Upon clicking the tweet button, the pre-selected text will appear in a pop-up twitter box. The user clicks 'tweet' and voilà!</p>
+
+			<h2 class="docHeading">Download</h2>
+			<p>You will need to download <strong><a href="#">jquery.tweetIt.js</a></strong> and place the file into your JavaScript folder in your root directory. An example path:</p>
+			<div class="code"> <!--codeblock-->
+				<code>ProjectMainFolder &gt; js &gt; jquery.tweetIt.js</code>
+			</div><!--end of clodeblock-->
+
+			<h2 class="docHeading">The Setup</h2>
+			<p>Next, you will want to make sure to link <strong>jQuery</strong> in your HTML file, along with <strong>jquery.tweetIt.js.</strong> Place these links <span class="underline">at the bottom</span>, just before your closing body tag, and make sure to place the plugin script <em>after</em> the jQuery script.</p>
+			<h3 class="html">HTML</h3>
+			<div class="code"> <!--codeblock-->
+				<code>&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;</code>
+				<br>
+				<code>&lt;script src=&quot;js/jquery.tweetIt.js&quot;&gt;&lt;/script&gt;</code>
+				<br><code>&lt;/body&gt;</code>
+			</div><!--end of clodeblock-->
+
+			<h2 class="docHeading">Initialization</h2>
+
+			<p>In order to initialize <strong>jquery.tweetIt.js</strong>, copy and paste the following code into your main JavaScript file.</p>
+			<p>If you already have your document ready function, simply call the function inside of it by copying and pasting just the middle line of code.</p>
+			<h3 class="javascript">JavaScript</h3>
+			<div class="code">
+<code><pre>$(function(){
+	$('.tweetButton').tweetIt();
+});</pre></code>
+			</div>
+
+			<h2 class="docHeading">Customization</h2>
+			
+			<p>The default settings for the plugin provide you with simply the text when you click on the tweet button. However, you also have multiple options to customize your tweet.</p>
+
+			<p>In order to do so, simply place an object inside the jquery.tweetIt.js function we called earlier (as shown below), and insert your chosen customization.</p>
+
+			<h4>Default</h4>
+			<div class="code">
+<code><pre>$(function(){
+	$('.tweetButton').tweetIt(
+		size: 'large',
+		count: 'none',
+		via: '',
+		hashtags: '',
+		url: null
+	);
+});</pre></code>
+			</div>
+
+			<h4>Sample Options</h4>
+
+	<div class="sample">
+				<table class="options">
+			<tr>
+				<th>Key</th>
+				<th>Value</th>
+			</tr>
+			<tr>
+				<td>size</td>
+				<td>large or small</td>
+			</tr>
+			<tr>
+				<td>count</td>
+				<td>vertical or horizontal</td>
+			</tr>
+			<tr>
+				<td>via</td>
+				<td>(insert your twitter handle without the @ symbol)</td>
+			</tr>
+			<tr>
+				<td>hastags</td>
+				<td>(if using more than one, comma separate)</td>
+			</tr>
+			<tr>
+				<td>url</td>
+				<td>(input url)</td>
+			</tr>
+		</table>
+		
+		<div class="code">
+<code><pre>$(function(){
+	$('.tweetButton').tweetIt(
+		size: 'small',
+		count: 'horizontal',
+		via: 'twitterdev',
+		hashtags: 'test, demo',
+		url: 'http://twitter.com'
+	);
+});</pre></code>
+		</div>
+	</div>
+
+			<h2 class="docHeading">And Finally</h2>
+
+			<p>You simply place a class of tweetButton to any element containing text that you wish to allow the user to tweet, and a button will appear alongside of it.</p>
+			<div class="code">
+				<code>&lt;h2 class="tweetButton"&gt;Love twitter? Use this dynamic jQuery plugin to make any text on your page tweetable!&lt;/h2&gt;</code>
+			</div>
+			<p>And you're done!</p>
+			<p class="remember">*Remember* Tweets can only be 140 characters, so make sure the text you are selecting is no longer than that (especially if you are including a url, via and/or hashtags), or else the user will have to edit the tweet.</p>
+
+
+
+		</div><!--end of Content Wrapper-->
+	</section> <!--End of Documentation section-->
+
+	<!-- FOOTER SECTION
+	==================================================================== -->
+	<footer>
+		<div class="wrapper">
+			<p>developed with <i class="fa fa-heart-o"></i> by <a href="http://twitter.com/amandamonaco_" target="blank">@amandamonaco_</a></p>
+			<p class="design">design inspiration from the lovely and talented <a href="http://andreacrofts.codes/" target="blank">Andrea Crofts</a></p>
+			<a href="#top"><button class="backToTop"><i class="fa fa-arrow-circle-up"></i> Back to top</button></a>
+		</div> <!-- end of wrapper -->
+	</footer> <!-- end of footer section -->
+	
+	<!-- JAVASCRIPT FILES
+	===================================================================== -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> <!--jQuery-->
+	<script src="js/jquery.tweetIt.js"></script> <!--tweetIt js file-->
+	<script src="js/main.js"></script> <!--main js file-->
+</body>
+</html>
