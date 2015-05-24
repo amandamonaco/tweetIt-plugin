@@ -37,6 +37,36 @@ If you already have your document ready function, simply call the function insid
 
 ##Customization
 
+The default settings for the plugin provide you with simply the text when you click on the tweet button. However, you also have multiple options to customize your tweet.
+
+In order to do so, simply place an object inside the jquery.tweetIt.js function we called earlier (as shown below), and insert your chosen customization.
+
+###Default<
+	
+	$(function(){
+		$('.tweetButton').tweetIt(
+			size: 'large',
+			count: 'none',
+			via: '',
+			hashtags: '',
+			url: null
+		);
+	});
+
+###Sample Options
+
+	![Table of options for plugin](assets/images/tableOfOptions.jpg)
+		
+	$(function(){
+		$('.tweetButton').tweetIt(
+			size: 'small',
+			count: 'horizontal',
+			via: 'twitterdev',
+			hashtags: 'test, demo',
+			url: 'http://twitter.com'
+		);
+	});
+
 ##And Finally
 
 You simply place a class of tweetButton to any element containing text that you wish to allow the user to tweet, and a button will appear alongside of it.
