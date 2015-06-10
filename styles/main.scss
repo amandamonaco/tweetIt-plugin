@@ -26,6 +26,9 @@ a{
 	max-width:70%;
 	margin:0 auto;
 	text-align: center;
+	@media (max-width: 1050px) {
+		max-width: 85%;
+	}
 }
 
 /*HEADING STYLES 
@@ -38,12 +41,18 @@ header{
 	justify-content:center;
 	align-items:center;
 	flex-direction:column;
+	@media (max-width: 790px) {
+		height:100%;
+	}
 	h1{
 		color:#ffffff;
 		font-family: 'barrioregular';
 		font-size: 100px;
 		margin:0;
 		padding:0;
+		@media (max-width: 400px){
+			font-size: 70px;
+		}
 	}
 	h2.tweetButton{
 		font-size: 30px;
@@ -51,8 +60,22 @@ header{
 		font-weight: 300;
 		letter-spacing: 5px;
 		line-height: 1.7;
+		@media (max-width: 790px) {
+			font-size: 20px;
+		}
+		@media (max-width: 400px){
+			font-size: 15px;
+		}
+	}
+	button{
+		@media (max-width: 790px) {
+			font-size: 15px;
+			margin-bottom: 10px;
+		}
 	}
 }
+
+
 
 i.fa-twitter{
 	color:#ffffff;
@@ -76,25 +99,46 @@ section.content{
 		font-size: 40px;
 		font-weight: 700;
 		text-transform: uppercase;
+		@media (max-width: 400px){
+			font-size: 25px;
+			margin-top: 10px;
+		}
 		span.title{
 			text-transform: none;
 			font-weight: 900;
 			font-size: 75px;
+			@media (max-width: 400px){
+				font-size: 40px;
+			}
+		}
+		section.content p{
+			@media (max-width: 320px){
+				font-size: 16px;
+			}
 		}
 	}
 	h2.docHeading.one{
 		font-weight: 400;
 		border-bottom: 4px solid #f62459;
 		font-size: 50px;
+		@media (max-width: 400px){
+			font-size: 25px;
+		}
 	}
 	p.remember{
 		font-size: 20px;
+		@media (max-width: 320px){
+			font-size: 15px;
+		}
 	}
 	p{
 		font-size: 25px;
 		font-weight:300;
 		text-align: left;
 		line-height: 1.5;
+		@media (max-width: 320px){
+			font-size: 15px;
+		}
 		span.firstWord{
 			font-weight: 400;
 		}
@@ -114,6 +158,9 @@ section.content{
 		color:#4ecdc4;
 		font-weight: 400;
 		font-size: 25px;
+		@media (max-width: 400px) {
+			font-size: 15px;
+		}
 	}
 	h3.javascript{
 		color:#bf55ec;
@@ -136,16 +183,67 @@ div.code{
 	font-family: monospace, sans-serif;
 	padding:30px;
 	line-height: 2;
+	@media (max-width: 1050px) {
+		font-size: 15px;	
+	}
+	@media (max-width: 320px){
+		padding:3px;
+	}
+	code{
+		@media (max-width: 790px) {
+				font-size: 12px;	
+		}
+	}
 }
 
-code.hideTwo,
-code.hideThree{
+code.hideOne{
+	@media (max-width: 525px) {
+		display:none;
+	}
+}
+
+code.hideTwo{
 	display:none;
+	@media (max-width: 525px) {
+	   display: inline-block;
+	}
+	@media (max-width: 400px){
+		display: none;
+	}
+}
+
+code.hideThree{
+	display: none;
+	@media (max-width: 400px){
+		display: inline-block;
+	}
+	@media (max-width: 320px){
+		display: none;
+	}
+}
+
+code.hideFour{
+	display: none;
+	@media (max-width: 320px){
+		display: inline-block;
+	}
+}
+
+code.shrink{
+	@media (max-width: 400px){
+		font-size: 9px;
+	}
 }
 
 div.sample{
 	display: flex;
 	justify-content: space-between;
+	@media (max-width: 1050px) {
+		flex-direction:column;
+		justify-content:center;
+		align-items:left;
+	}
+
 }
 
 /*TABLE STYLES
@@ -157,13 +255,22 @@ table{
 	margin-bottom: 20px;
 	margin-top: 20px;
 	order: 2;
+	@media (max-width: 1050px) {
+		order:-1;
+	}
 	th{
 		padding:20px;
 		font-size: 20px;
+		@media (max-width: 320px){
+			font-size: 15px;
+		}
 	}
 	td{
 		border: 1px solid #22313f;
 		padding: 20px;
+		@media (max-width: 320px){
+			font-size: 12px;
+		}
 	}
 }
 
@@ -179,10 +286,16 @@ footer {
 		color:#ffffff;
 		margin:0;
 		padding-top:10px;
+		@media (max-width: 320px){
+			font-size: 20px;
+		}
 	}
 	p.design{
 		font-size: 20px;
 		padding-bottom: 20px;
+		@media (max-width: 320px){
+			font-size: 15px;
+		}
 	}
 }
 
@@ -192,85 +305,11 @@ footer a:hover{
 	-webkit-transition: all ease 0.5s;
 }
 
-/*MEDIA QUERIES
-================================================*/
-
-/* Portrait tablet and small desktops */
-@media (max-width: 1050px) {
-	.wrapper{
-		max-width: 85%;
-	}
-	code{
-		font-size: 15px;	
-	}
-	div.sample{
-		flex-direction:column;
-		justify-content:center;
-		align-items:left;
-	}
-	table{
-		order:-1;
-	}
-}
-
- 
-/* Landscape phone to portrait tablet */
-@media (max-width: 790px) {
-	code{
-		font-size: 12px;	
-	}
-	header{
-		height:100%;
-	}
-	h2.tweetButton{
-		font-size: 20px;
-	}
-	button{
-		font-size: 15px;
-		margin-bottom: 10px;
-	}
-	i.fa-arrow-circle-down{
-		font-size: 15px;
-	}
-}
-
-/* Landscape phones and down */
-@media (max-width: 525px) {
-	code.hideOne{
-		display:none;
-	}
-	code.hideTwo{
-		display: inline-block;
-	}
-}
 
 
-/* Smallest of the Phones */
-@media (max-width: 320px) {
-	h1{
-		font-size: 50px;
-	}
-	h2.tweetButton{
-		font-size: 15px;
-	}
-	span.title{
-		font-size: 40px;
-	}
-	h2.docHeading{
-		font-size: 20px;
-	}
-	section.content p{
-		font-size: 16px;
-	}
-	code.hideTwo{
-		display: none;
-	}
-	code.hideThree{
-		display:inline-block;
-	}
-	code.shrink{
-		font-size: 9px;
-	}
 
-}
+
+
+
+
 
